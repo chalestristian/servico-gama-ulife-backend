@@ -40,7 +40,6 @@ C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-g
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.AssemblyReference.cache
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.AssemblyInfoInputs.cache
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.AssemblyInfo.cs
@@ -56,3 +55,5 @@ C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-g
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\ref\servico-gama-ulife.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.pdb
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.genruntimeconfig.cache
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Npgsql.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\AutoMapper.dll
