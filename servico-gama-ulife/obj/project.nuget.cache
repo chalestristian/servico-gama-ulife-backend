@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "t3Hmp9g+DnEUHwxkWH6FjHjw4qgG9rFmYfL/i+3NXMxMkbVxzZQ+dyd/+SI0DcqglQNqDgeMwGGXnIazVUMYUA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
