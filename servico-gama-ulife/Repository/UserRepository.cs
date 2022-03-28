@@ -7,6 +7,7 @@ using servico_gama_ulife.Repository.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using servico_gama_ulife.Service.Request;
+using System.Data;
 
 namespace servico_gama_ulife.Repository
 {
@@ -20,7 +21,7 @@ namespace servico_gama_ulife.Repository
             string sql = @"SELECT * from ""user"" where nr_registry = :nr_registry";
 
             var parameters = new DynamicParameters();
-            parameters.Add("@nr_registry", nr_registry, System.Data.DbType.Int64, direction: System.Data.ParameterDirection.Input);
+            parameters.Add("@nr_registry", nr_registry, DbType.Int64, direction: ParameterDirection.Input);
 
 
             using (var connection = GetConnection() as NpgsqlConnection)
@@ -49,9 +50,9 @@ namespace servico_gama_ulife.Repository
                            WHERE nr_registry = :nr_registry";
 
             var parameters = new DynamicParameters();
-            parameters.Add("@nr_registry", nr_registry, System.Data.DbType.Int64, direction: System.Data.ParameterDirection.Input);
-            parameters.Add("@nm_user", nm_user, System.Data.DbType.String, direction: System.Data.ParameterDirection.Input);
-            parameters.Add("@ds_email", ds_email, System.Data.DbType.String, direction: System.Data.ParameterDirection.Input);
+            parameters.Add("@nr_registry", nr_registry, DbType.Int64, direction: ParameterDirection.Input);
+            parameters.Add("@nm_user", nm_user, DbType.String, direction: ParameterDirection.Input);
+            parameters.Add("@ds_email", ds_email, DbType.String, direction: ParameterDirection.Input);
 
 
             using (var connection = GetConnection() as NpgsqlConnection)
@@ -66,10 +67,10 @@ namespace servico_gama_ulife.Repository
                             values(:nr_registry, :nm_user, :ds_email,:ds_usertypeid,now(),null)";
 
             var parameters = new DynamicParameters();
-            parameters.Add("@nr_registry", newUser.Nr_registry, System.Data.DbType.Int64, direction: System.Data.ParameterDirection.Input);
-            parameters.Add("@nm_user", newUser.Nm_user, System.Data.DbType.String, direction: System.Data.ParameterDirection.Input);
-            parameters.Add("@ds_email", newUser.Ds_email, System.Data.DbType.String, direction: System.Data.ParameterDirection.Input);
-            parameters.Add("@ds_usertypeid", newUser.Ds_usertypeid, System.Data.DbType.Int64, direction: System.Data.ParameterDirection.Input);
+            parameters.Add("@nr_registry", newUser.Nr_registry, DbType.Int64, direction: ParameterDirection.Input);
+            parameters.Add("@nm_user", newUser.Nm_user, DbType.String, direction: ParameterDirection.Input);
+            parameters.Add("@ds_email", newUser.Ds_email, DbType.String, direction: ParameterDirection.Input);
+            parameters.Add("@ds_usertypeid", newUser.Ds_usertypeid, DbType.Int64, direction: ParameterDirection.Input);
 
 
             using (var connection = GetConnection() as NpgsqlConnection)

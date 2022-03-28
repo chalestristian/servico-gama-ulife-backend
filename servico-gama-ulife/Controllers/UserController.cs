@@ -1,5 +1,5 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using servico_gama_ulife.Mapper;
 using servico_gama_ulife.Model;
 using servico_gama_ulife.Response;
 using servico_gama_ulife.Service;
@@ -13,12 +13,12 @@ namespace servico_gama_ulife.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly IMapper _mapper;
+        private readonly IObjectConverter _objectConverter;
 
-        public UserController(IUserService userService, IMapper mapper)
+        public UserController(IUserService userService, IObjectConverter objectConverter)
         {
             _userService = userService;
-            _mapper = mapper;
+            _objectConverter = objectConverter;
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace servico_gama_ulife.Controllers
         public IActionResult GetAllUser()
         {
             var user = _userService.GetAllUser();
-            return Ok(_mapper.Map<IList<UserResponse>>(user));
+            return Ok(_objectConverter.Map<IList<UserResponse>>(user));
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace servico_gama_ulife.Controllers
         public IActionResult GetUserById([FromRoute] int nr_registry)
         {
             var user = _userService.GetUserById(nr_registry);
-            return Ok(_mapper.Map<UserResponse>(user));
+            return Ok(_objectConverter.Map<UserResponse>(user));
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace servico_gama_ulife.Controllers
         public IActionResult PutUser([FromRoute] int nr_registry, [FromBody] EditUser request)
         {
             UserModel user = _userService.PutUser(nr_registry, request.Nm_user, request.Ds_email);
-            return Ok(_mapper.Map<UserResponse>(user));
+            return Ok(_objectConverter.Map<UserResponse>(user));
         }
 
         /// <summary>

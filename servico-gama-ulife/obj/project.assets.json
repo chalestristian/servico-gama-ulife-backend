@@ -834,23 +834,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\milenaf\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WorkSpace\\new\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
       "projectName": "servico-gama-ulife",
-      "projectPath": "C:\\WorkSpace\\new\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
-      "packagesPath": "C:\\Users\\milenaf\\.nuget\\packages\\",
-      "outputPath": "C:\\WorkSpace\\new\\servico-gama-ulife-backend\\servico-gama-ulife\\obj\\",
+      "projectPath": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
+      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\milenaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -858,8 +859,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/alm-animaeducacao/_packaging/animacore/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -920,7 +920,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

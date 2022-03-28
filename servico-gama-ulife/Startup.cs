@@ -28,7 +28,6 @@ namespace servico_gama_ulife
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "servico_gama_ulife", Version = "v1" });
             });
             services.AddCors();
-            services.AddAutoMapper(typeof(ModelToResponseProfile));
             services.AddRegistrationDependencies();
         }
 
