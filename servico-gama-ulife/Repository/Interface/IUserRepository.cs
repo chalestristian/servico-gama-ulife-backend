@@ -11,5 +11,6 @@ namespace servico_gama_ulife.Repository.Interface
         UserModel PutUser(int nr_registry, string nm_user, string ds_email);
         IList<UserModel> GetAllUser();
         string AddUser(AddUser newUser);
+        IList<UserModel> GetAllByType(int nr_registry);
     }
 }
