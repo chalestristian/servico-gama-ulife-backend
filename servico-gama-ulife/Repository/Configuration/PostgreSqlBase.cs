@@ -10,17 +10,16 @@ namespace servico_gama_ulife.Repository.Configuration
     {
         private readonly IConfiguration _configuration;
 
-        protected PostgreSqlBase(IConfiguration configuration)
+        public PostgreSqlBase(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
         public IDbConnection GetConnection()
         {
-            string connectionString = _configuration.GetConnectionString("ServicoGamaUlife");
+            string connectionString = _configuration.GetConnectionString("ServicoGamaUlife");               
             IDbConnection dbConnection = new NpgsqlConnection(connectionString);
             dbConnection.Open();
-
             return dbConnection;
         }
         protected virtual int Execute(string sql, IDbConnection connection, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)

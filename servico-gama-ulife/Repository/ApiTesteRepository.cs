@@ -9,6 +9,7 @@ namespace servico_gama_ulife.Repository
 {
     public class ApiTesteRepository : PostgreSqlBase, IApiTesteRepository
     {
+
         public ApiTesteRepository(IConfiguration configuration) : base(configuration)
         {
         }
@@ -53,5 +54,6 @@ namespace servico_gama_ulife.Repository
             }
             return teste;
         }
+
     }
 }

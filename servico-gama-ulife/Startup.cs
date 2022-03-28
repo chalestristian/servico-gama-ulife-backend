@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using servico_gama_ulife.DI;
+using servico_gama_ulife.Mapper.Profiles;
 
 namespace servico_gama_ulife
 {
@@ -27,7 +28,7 @@ namespace servico_gama_ulife
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "servico_gama_ulife", Version = "v1" });
             });
             services.AddCors();
-
+            services.AddAutoMapper(typeof(ModelToResponseProfile));
             services.AddRegistrationDependencies();
         }
 
