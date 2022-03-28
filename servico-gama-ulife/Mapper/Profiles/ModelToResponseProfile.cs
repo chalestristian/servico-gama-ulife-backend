@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using servico_gama_ulife.Model;
+using servico_gama_ulife.Response;
+using servico_gama_ulife.Service.Request;
 
 namespace servico_gama_ulife.Mapper.Profiles
 {
@@ -10,6 +9,7 @@ namespace servico_gama_ulife.Mapper.Profiles
     {
         public ModelToResponseProfile()
         {
+            CreateMap<UserModel, UserResponse>().ReverseMap();
         }
     }
 }

@@ -58,3 +58,36 @@ C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-g
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Npgsql.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.AssemblyReference.cache
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.AssemblyReference.cache
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.AssemblyInfoInputs.cache
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.AssemblyInfo.cs
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.CoreCompileInputs.cache
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.MvcApplicationPartsAssemblyInfo.cs
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.MvcApplicationPartsAssemblyInfo.cache
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.pdb
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\appsettings.Development.json
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\appsettings.json
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.StaticWebAssets.xml
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.exe
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.deps.json
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.runtimeconfig.json
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.runtimeconfig.dev.json
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.pdb
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\AutoMapper.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Dapper.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Npgsql.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\scopedcss\bundle\servico-gama-ulife.styles.css
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\staticwebassets\servico-gama-ulife.StaticWebAssets.Manifest.cache
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.RazorTargetAssemblyInfo.cache
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.CopyComplete
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\refint\servico-gama-ulife.dll
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.genruntimeconfig.cache
+C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\ref\servico-gama-ulife.dll
