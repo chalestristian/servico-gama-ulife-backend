@@ -68,5 +68,17 @@ namespace servico_gama_ulife.Controllers
             var user = _userService.AddUser(request);
             return Ok(user);
         }
+
+        /// <summary>
+        /// Buscar todos os usuários pelo tipo ( 1-Estudante ou 2-Professor )
+        /// </summary>
+        /// <param name="nr_registry"></param>
+        /// <returns></returns>
+        [HttpGet("type/{nr_registry}")]
+        public IActionResult GetAllByType([FromRoute] int nr_registry)
+        {
+            var user = _userService.GetAllByType(nr_registry);
+            return Ok(_mapper.Map<UserResponse>(user));
+        }        
     }
 }

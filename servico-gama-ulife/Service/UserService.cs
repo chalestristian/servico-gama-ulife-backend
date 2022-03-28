@@ -15,7 +15,7 @@ namespace servico_gama_ulife.Service
         }
 
         public UserModel GetUserById(int nr_registry)
-        {           
+        {
             var resp = _userRepository.GetUserById(nr_registry);
             return resp;
         }
@@ -28,7 +28,7 @@ namespace servico_gama_ulife.Service
 
         public UserModel PutUser(int nr_registry, string Nm_user, string Ds_email)
         {
-            var resp = _userRepository.PutUser(nr_registry,Nm_user,Ds_email);
+            var resp = _userRepository.PutUser(nr_registry, Nm_user, Ds_email);
             return resp;
         }
 
@@ -36,6 +36,18 @@ namespace servico_gama_ulife.Service
         {
             var resp = _userRepository.AddUser(newUser);
             return resp.ToString();
+        }
+
+        public IList<UserModel> GetAllByType(int nr_registry)
+        {
+            if (nr_registry == (int)Enum.TypeUser.Estudante || nr_registry == (int)Enum.TypeUser.Professor)
+            {
+                return _userRepository.GetAllByType(nr_registry);
+            }
+            else
+            {
+                throw new System.NotImplementedException("Tipo de Estudante não encontrado!");
+            }
         }
     }
 }

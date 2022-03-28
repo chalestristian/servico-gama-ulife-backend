@@ -79,5 +79,15 @@ namespace servico_gama_ulife.Repository
             }
         }
 
+        public IList<UserModel> GetAllByType(int nr_registry)
+        {
+            string sql = @"SELECT * from ""user"" where ds_usertypeid = @nr_registry";
+
+            using (var connection = GetConnection() as NpgsqlConnection)
+            {
+                return connection.Query<UserModel>(sql).ToList();
+            }
+        }       
+
     }
 }
