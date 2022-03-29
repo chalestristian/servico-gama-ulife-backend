@@ -34,9 +34,9 @@ namespace servico_gama_ulife.Repository
         public IEnumerable<QuestionModel> GetQuestionnaireQuestionsById(int nr_questionnaireid)
         {
             using var connection = GetConnection() as NpgsqlConnection;
-            string sqlQuestionList = @"select q.* from questionnaire_question qq 
-                                    join question q ON qq.nr_questionid = qq.nr_questionid 
-                                    where qq.nr_questionnaireid = :nr_questionnaireid";
+            string sqlQuestionList = @"select * from questionnaire_question qq 
+                                       join question q on q.nr_questionid = qq.nr_questionid 
+                                       where qq.nr_questionnaireid = :nr_questionnaireid";
 
             IEnumerable<QuestionModel> resultQuestionList = connection.Query<QuestionModel>(sqlQuestionList, new { nr_questionnaireid });
 
