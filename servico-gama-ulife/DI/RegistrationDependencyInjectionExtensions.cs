@@ -19,12 +19,14 @@ namespace servico_gama_ulife.DI
         {
             services.AddScoped<IApiTesteRepository, ApiTesteRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserAuthenticationRepository, UserAuthenticationRepository>();
         }
 
         private static void RegisterServices(IServiceCollection services)
         {
             services.AddScoped<IApiTesteService, ApiTesteService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
         }
     }
 }

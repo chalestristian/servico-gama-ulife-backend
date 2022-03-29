@@ -57,7 +57,6 @@ C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-g
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.genruntimeconfig.cache
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Npgsql.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\AutoMapper.dll
-C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.AssemblyReference.cache
 C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.AssemblyReference.cache
 C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.GeneratedMSBuildEditorConfig.editorconfig
 C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.AssemblyInfoInputs.cache
@@ -93,3 +92,10 @@ C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\
 C:\WorkSpace\new\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\ref\servico-gama-ulife.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Dapper.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
