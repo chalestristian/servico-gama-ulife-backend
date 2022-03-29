@@ -16,38 +16,29 @@ namespace servico_gama_ulife.Service
 
         public UserModel GetUserById(int nr_registry)
         {
-            var resp = _userRepository.GetUserById(nr_registry);
-            return resp;
+            return _userRepository.GetUserById(nr_registry);
         }
 
         public IList<UserModel> GetAllUser()
         {
-            var resp = _userRepository.GetAllUser();
-            return resp;
+            return _userRepository.GetAllUser();
         }
 
         public UserModel PutUser(int nr_registry, string Nm_user, string Ds_email)
         {
-            var resp = _userRepository.PutUser(nr_registry, Nm_user, Ds_email);
-            return resp;
+            return _userRepository.PutUser(nr_registry, Nm_user, Ds_email);
         }
 
         public string AddUser(AddUser newUser)
         {
-            var resp = _userRepository.AddUser(newUser);
-            return resp.ToString();
+            return _userRepository.AddUser(newUser).ToString();
         }
 
-        public IList<UserModel> GetAllByType(int nr_registry)
+        public IList<UserModel> GetAllByType(int nr_type)
         {
-            if (nr_registry == (int)Enum.TypeUser.Estudante || nr_registry == (int)Enum.TypeUser.Professor)
-            {
-                return _userRepository.GetAllByType(nr_registry);
-            }
-            else
-            {
-                throw new System.NotImplementedException("Tipo de Estudante não encontrado!");
-            }
+            return (nr_type == (int)Enum.TypeUser.Estudante || nr_type == (int)Enum.TypeUser.Professor)
+                      ? _userRepository.GetAllByType(nr_type)
+                      : throw new System.NotImplementedException("Tipo de usuário não encontrado!");
         }
     }
 }

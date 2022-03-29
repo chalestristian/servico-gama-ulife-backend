@@ -10,7 +10,6 @@ namespace servico_gama_ulife.Mapper
             return new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile(new ModelToResponseProfile());
-
             });
         }
     }

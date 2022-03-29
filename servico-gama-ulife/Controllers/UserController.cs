@@ -4,6 +4,7 @@ using servico_gama_ulife.Model;
 using servico_gama_ulife.Response;
 using servico_gama_ulife.Service;
 using servico_gama_ulife.Service.Request;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace servico_gama_ulife.Controllers
@@ -28,7 +29,7 @@ namespace servico_gama_ulife.Controllers
         [HttpGet]
         public IActionResult GetAllUser()
         {
-            var user = _userService.GetAllUser();
+            IList<UserModel> user = _userService.GetAllUser();
             return Ok(_objectConverter.Map<IList<UserResponse>>(user));
         }
 
@@ -40,7 +41,7 @@ namespace servico_gama_ulife.Controllers
         [HttpGet("{nr_registry}")]
         public IActionResult GetUserById([FromRoute] int nr_registry)
         {
-            var user = _userService.GetUserById(nr_registry);
+            UserModel user = _userService.GetUserById(nr_registry);
             return Ok(_objectConverter.Map<UserResponse>(user));
         }
 
@@ -65,7 +66,7 @@ namespace servico_gama_ulife.Controllers
         [HttpPost]
         public IActionResult AddUser([FromBody] AddUser request)
         {
-            var user = _userService.AddUser(request);
+            string user = _userService.AddUser(request);
             return Ok(user);
         }
 
@@ -74,11 +75,11 @@ namespace servico_gama_ulife.Controllers
         /// </summary>
         /// <param name="nr_registry"></param>
         /// <returns></returns>
-        [HttpGet("type/{nr_registry}")]
-        public IActionResult GetAllByType([FromRoute] int nr_registry)
+        [HttpGet("type/{nr_type}")]
+        public IActionResult GetAllByType([FromRoute] int nr_type)
         {
-            var user = _userService.GetAllByType(nr_registry);
-            return Ok(_mapper.Map<UserResponse>(user));
-        }        
+            IList<UserModel> user = _userService.GetAllByType(nr_type);
+            return Ok(_objectConverter.Map<IList<UserResponse>>(user));
+        }
     }
 }

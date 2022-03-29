@@ -16,18 +16,16 @@ namespace servico_gama_ulife.Repository
         public UserRepository(IConfiguration configuration) : base(configuration)
         {
         }
+
         public UserModel GetUserById(int nr_registry)
         {
             string sql = @"SELECT * from ""user"" where nr_registry = :nr_registry";
 
-            var parameters = new DynamicParameters();
+            DynamicParameters parameters = new();
             parameters.Add("@nr_registry", nr_registry, DbType.Int64, direction: ParameterDirection.Input);
 
-
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                return connection.QueryFirstOrDefault<UserModel>(sql, parameters);
-            }
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            return connection.QueryFirstOrDefault<UserModel>(sql, parameters);
 
         }
 
@@ -35,10 +33,8 @@ namespace servico_gama_ulife.Repository
         {
             string sql = @"SELECT * from ""user"" ";
 
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                return connection.Query<UserModel>(sql).ToList();
-            }
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            return connection.Query<UserModel>(sql).ToList();
         }
 
         public UserModel PutUser(int nr_registry, string nm_user, string ds_email)
@@ -49,16 +45,13 @@ namespace servico_gama_ulife.Repository
                                 ds_email = :ds_email
                            WHERE nr_registry = :nr_registry";
 
-            var parameters = new DynamicParameters();
+            DynamicParameters parameters = new();
             parameters.Add("@nr_registry", nr_registry, DbType.Int64, direction: ParameterDirection.Input);
             parameters.Add("@nm_user", nm_user, DbType.String, direction: ParameterDirection.Input);
             parameters.Add("@ds_email", ds_email, DbType.String, direction: ParameterDirection.Input);
 
-
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                return connection.QueryFirstOrDefault<UserModel>(sql, parameters);
-            }
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            return connection.QueryFirstOrDefault<UserModel>(sql, parameters);
         }
 
         public string AddUser(AddUser newUser)
@@ -66,28 +59,26 @@ namespace servico_gama_ulife.Repository
             string sql = @"INSERT into ""user"" (nr_registry,nm_user,ds_email, ds_usertypeid,dt_creationdate,dt_modifieddate)	
                             values(:nr_registry, :nm_user, :ds_email,:ds_usertypeid,now(),null)";
 
-            var parameters = new DynamicParameters();
+            DynamicParameters parameters = new();
             parameters.Add("@nr_registry", newUser.Nr_registry, DbType.Int64, direction: ParameterDirection.Input);
             parameters.Add("@nm_user", newUser.Nm_user, DbType.String, direction: ParameterDirection.Input);
             parameters.Add("@ds_email", newUser.Ds_email, DbType.String, direction: ParameterDirection.Input);
             parameters.Add("@ds_usertypeid", newUser.Ds_usertypeid, DbType.Int64, direction: ParameterDirection.Input);
 
-
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                return connection.Query<string>(sql, parameters).ToString();
-            }
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            return connection.Query<string>(sql, parameters).ToString();
         }
 
-        public IList<UserModel> GetAllByType(int nr_registry)
+        public IList<UserModel> GetAllByType(int nr_type)
         {
-            string sql = @"SELECT * from ""user"" where ds_usertypeid = @nr_registry";
+            string sql = @"SELECT * from ""user"" where ds_usertypeid = :nr_type";
 
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                return connection.Query<UserModel>(sql).ToList();
-            }
-        }       
+            DynamicParameters parameters = new();
+            parameters.Add("@nr_type", nr_type, DbType.Int64, direction: ParameterDirection.Input);
+
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            return connection.Query<UserModel>(sql, parameters).ToList();
+        }
 
     }
 }

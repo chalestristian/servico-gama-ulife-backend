@@ -4,6 +4,7 @@ using servico_gama_ulife.Repository.Configuration;
 using Npgsql;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data;
 
 namespace servico_gama_ulife.Repository
 {
@@ -23,10 +24,8 @@ namespace servico_gama_ulife.Repository
         {
             string sql = $@"Sua query aqui !!!";
 
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                Execute(sql, connection);
-            }
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            Execute(sql, connection);
         }
 
         public IEnumerable<object> BuscarDadosNoBancoAtravesDeUmObjetoEspecifico(int codigo)
@@ -34,12 +33,9 @@ namespace servico_gama_ulife.Repository
             IEnumerable<object> teste = null;
             string sql = $@"Sua query aqui !! {codigo}";
 
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                teste = Query<object>(sql, connection);
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            return Query<object>(sql, connection);
 
-            }
-            return teste;
         }
 
         public object BuscarUmUnicoDadoNoBanco(int codigo)
@@ -47,13 +43,8 @@ namespace servico_gama_ulife.Repository
             object teste = null;
             string sql = $@"Sua query aqui{codigo}";
 
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                teste = Query<object>(sql, connection).FirstOrDefault();
-
-            }
-            return teste;
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            return Query<object>(sql, connection).FirstOrDefault();
         }
-
     }
 }
