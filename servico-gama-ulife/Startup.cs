@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,7 +8,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using servico_gama_ulife.DI;
+using servico_gama_ulife.Filter;
 using servico_gama_ulife.Mapper.Profiles;
+using servico_gama_ulife.Validators;
 using System.Text;
 
 namespace servico_gama_ulife
@@ -25,7 +28,13 @@ namespace servico_gama_ulife
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers()
+                .AddFluentValidation(fv =>
+                    {
+                        fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
+                        fv.ValidatorOptions.LanguageManager.Culture = new System.Globalization.CultureInfo("pt-BR");
+                    });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "servico_gama_ulife", Version = "v1" });
