@@ -13,6 +13,7 @@ namespace servico_gama_ulife.Mapper.Profiles
             CreateMap<QuestionnaireModel, QuestionnaireResponse>().ReverseMap();
             CreateMap<QuestionModel, QuestionResponse>().ReverseMap();
             CreateMap<AlternativesModel, AlternativesResponse>().ReverseMap();
+            CreateMap<UserEvaluationModel, UserEvaluationResponse>().ReverseMap();
         }
     }
 }

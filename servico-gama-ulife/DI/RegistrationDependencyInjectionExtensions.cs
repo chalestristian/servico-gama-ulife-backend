@@ -21,6 +21,7 @@ namespace servico_gama_ulife.DI
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserAuthenticationRepository, UserAuthenticationRepository>();
             services.AddScoped<IQuestionnaireRepository, QuestionnaireRepository>();
+            services.AddScoped<IUserEvaluationRepository, UserEvaluationRepository>();
         }
 
         private static void RegisterServices(IServiceCollection services)
@@ -29,6 +30,7 @@ namespace servico_gama_ulife.DI
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
             services.AddScoped<IQuestionnaireService, QuestionnaireService>();
+            services.AddScoped<IUserEvaluationService, UserEvaluationService>();
         }
     }
 }
