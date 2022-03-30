@@ -8,8 +8,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using servico_gama_ulife.DI;
-using servico_gama_ulife.Filter;
-using servico_gama_ulife.Mapper.Profiles;
 using servico_gama_ulife.Validators;
 using System.Text;
 

@@ -4,7 +4,6 @@ using servico_gama_ulife.Model;
 using servico_gama_ulife.Response;
 using servico_gama_ulife.Service;
 using servico_gama_ulife.Service.Request;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace servico_gama_ulife.Controllers

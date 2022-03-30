@@ -99,3 +99,6 @@ C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-g
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll

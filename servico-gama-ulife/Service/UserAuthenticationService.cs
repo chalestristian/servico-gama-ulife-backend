@@ -6,6 +6,7 @@ using servico_gama_ulife.Model;
 using servico_gama_ulife.Repository.Interface;
 using servico_gama_ulife.Service.Interface;
 using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -31,7 +32,7 @@ namespace servico_gama_ulife.Service
             UserAuthenticationModel user = _objectConverter.Map<UserAuthenticationModel>(request);
             UserAuthenticationModel userAuth = _userAuthenticationRepository.UserSearch(user);
 
-            if (!userAuth.Any())
+            if (userAuth == null)
             {
                 return null;
             }
