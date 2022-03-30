@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using servico_gama_ulife.Enum;
 using servico_gama_ulife.Mapper;
 using servico_gama_ulife.Model;
 using servico_gama_ulife.Response;
@@ -26,6 +27,7 @@ namespace servico_gama_ulife.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [Route("GetAllUserEvaluation")]
         public IActionResult GetAllUserEvaluation()
         {
             var userEvaluation = _userEvaluationService.GetAllUserEvaluation();
@@ -37,7 +39,8 @@ namespace servico_gama_ulife.Controllers
         /// </summary>
         /// <param name="nr_userevaluationid"></param>
         /// <returns></returns>
-        [HttpGet("{nr_userevaluationid}")]
+        [HttpGet]
+        [Route("GetUserEvaluationById/{nr_userevaluationid}")]
         public IActionResult GetUserEvaluationById([FromRoute] int nr_userevaluationid)
         {
             var userEvaluation = _userEvaluationService.GetUserEvaluationById(nr_userevaluationid);
@@ -47,14 +50,13 @@ namespace servico_gama_ulife.Controllers
         /// <summary>
         /// Atualizar nota e status
         /// </summary>
-        /// <param name="nr_userevaluationid"></param>
-        /// /// <param name="nr_userid"></param>
-        /// <param name="request"></param>
+        /// <param name="updateUserEvaluation"></param>
         /// <returns></returns>
-        [HttpPut("{nr_userevaluationid}")]
-        public IActionResult PutUserEvaluation([FromRoute] int nr_userid, [FromRoute] int nr_userevaluationid, [FromBody] UpdateUserEvaluation request)
+        [HttpPut]
+        [Route("PutUserEvaluation")]
+        public IActionResult PutUserEvaluation([FromBody] UpdateUserEvaluation updateUserEvaluation)
         {
-            UserEvaluationModel userEvaluation = _userEvaluationService.UpdateUserEvaluation(nr_userid, nr_userevaluationid, request.Nr_grade, request.Ds_hasdone);
+            UserEvaluationModel userEvaluation = _userEvaluationService.UpdateUserEvaluation(updateUserEvaluation);
             return Ok(_objectConverter.Map<UserEvaluationResponse>(userEvaluation));
         }
 
@@ -64,9 +66,10 @@ namespace servico_gama_ulife.Controllers
         /// <param name="newUserEvaluation"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult AddUserEvaluation([FromBody] AddUserEvaluation request)
+        [Route("AddUserEvaluation")]
+        public IActionResult AddUserEvaluation([FromBody] AddUserEvaluation addUserEvaluation)
         {
-            var userEvaluation = _userEvaluationService.AddUserEvaluation(request);
+            var userEvaluation = _userEvaluationService.AddUserEvaluation(addUserEvaluation);
             return Ok(userEvaluation);
         }
 
@@ -75,11 +78,26 @@ namespace servico_gama_ulife.Controllers
         /// </summary>
         /// <param name="nr_userid"></param>
         /// <returns></returns>
-        [HttpGet("{nr_userid}")]
-        public IActionResult GetUserEvaluationByUser([FromRoute] int nr_userid)
+        [HttpGet]
+        [Route("GetUserEvaluationByUser/{nr_userid}")]
+        public IActionResult GetUserEvaluationByUser([FromRoute] int nr_userid, int typeUser)
         {
-            var userEvaluation = _userEvaluationService.GetUserEvaluationByUser(nr_userid);
-            return Ok(_objectConverter.Map<UserResponse>(userEvaluation));
+            var userEvaluation = _userEvaluationService.GetUserEvaluationByUser(nr_userid, typeUser);
+            return Ok(_objectConverter.Map<IList<UserEvaluationResponse>>(userEvaluation));
+        }
+
+        /// <summary>
+        /// Buscar avaliações por usuário
+        /// </summary>
+        /// <param name="nr_userid"></param>
+        /// /// <param name="nr_userevaluationid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GetUserEvaluationByIdAndUser/{nr_userid}")]
+        public IActionResult GetUserEvaluationByIdAndUser(int nr_userid, int nr_userevaluationid)
+        {
+            var userEvaluation = _userEvaluationService.GetUserEvaluationByIdAndUser(nr_userid, nr_userevaluationid);
+            return Ok(_objectConverter.Map<UserEvaluationResponse>(userEvaluation));
         }
     }
 }
