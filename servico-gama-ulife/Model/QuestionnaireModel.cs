@@ -7,6 +7,7 @@ namespace servico_gama_ulife.Model
     {
         public int Nr_questionnaireId { get; set; }
         public int Nr_userId { get; set; }
+        public string Nm_questionnaire { get; set; }
         public string Ds_Questionnaire { get; set; }
         public DateTime Dt_CreationDate { get; set; }
         public DateTime? Dt_ModifieldDate { get; set; }
