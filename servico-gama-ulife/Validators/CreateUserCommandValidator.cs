@@ -9,11 +9,16 @@ namespace servico_gama_ulife.Validators
         {
             RuleFor(p => p.Nr_registry)
                 .NotNull().WithMessage("Matrícula é obrigatória!")
-                .NotEmpty();                
+                .NotEmpty();
 
             RuleFor(p => p.Ds_email)
                 .NotNull().WithMessage("E-mail obrigatório!")
                 .EmailAddress().WithMessage("Este e-mail não é válido!");
+
+            RuleFor(p => p.Ds_password)
+                .NotEmpty()
+                .NotNull()
+                .MinimumLength(6).WithMessage("Senha deve conter 6 caracteres.");
 
             RuleFor(p => p.Nm_user)
                 .NotEmpty()

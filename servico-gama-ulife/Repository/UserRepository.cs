@@ -56,13 +56,14 @@ namespace servico_gama_ulife.Repository
 
         public string AddUser(AddUser newUser)
         {
-            string sql = @"INSERT into ""user"" (nr_registry,nm_user,ds_email, ds_usertypeid,dt_creationdate,dt_modifieddate)	
-                            values(:nr_registry, :nm_user, :ds_email,:ds_usertypeid,now(),null)";
+            string sql = @"INSERT into ""user"" (nr_registry,nm_user,ds_email, ds_password, ds_usertypeid,dt_creationdate,dt_modifieddate)	
+                            values(:nr_registry, :nm_user, :ds_email,:ds_password,:ds_usertypeid, now(), null)";
 
             DynamicParameters parameters = new();
             parameters.Add("@nr_registry", newUser.Nr_registry, DbType.Int64, direction: ParameterDirection.Input);
             parameters.Add("@nm_user", newUser.Nm_user, DbType.String, direction: ParameterDirection.Input);
             parameters.Add("@ds_email", newUser.Ds_email, DbType.String, direction: ParameterDirection.Input);
+            parameters.Add("@ds_password", newUser.Ds_password, DbType.String, direction: ParameterDirection.Input);
             parameters.Add("@ds_usertypeid", newUser.Ds_usertypeid, DbType.Int64, direction: ParameterDirection.Input);
 
             using IDbConnection connection = GetConnection() as NpgsqlConnection;
