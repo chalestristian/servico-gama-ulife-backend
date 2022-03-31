@@ -145,3 +145,4 @@ C:\Projetos\Projeto Integrador Ulife para Devs\servico-gama-ulife-backend\servic
 C:\Projetos\Projeto Integrador Ulife para Devs\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\ref\servico-gama-ulife.dll
 C:\Projetos\Projeto Integrador Ulife para Devs\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.pdb
 C:\Projetos\Projeto Integrador Ulife para Devs\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.genruntimeconfig.cache
+C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.AssemblyReference.cache

@@ -1831,36 +1831,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hugo.damasceno\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Projeto Integrador Ulife para Devs\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
       "projectName": "servico-gama-ulife",
-      "projectPath": "C:\\Projetos\\Projeto Integrador Ulife para Devs\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
-      "packagesPath": "C:\\Users\\hugo.damasceno\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Projeto Integrador Ulife para Devs\\servico-gama-ulife-backend\\servico-gama-ulife\\obj\\",
+      "projectPath": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
+      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\hugo.damasceno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.animaeducacao.com.br/nuget": {},
-        "https://alm-animaeducacao.pkgs.visualstudio.com/_packaging/animacore/nuget/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1934,7 +1929,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -1943,7 +1938,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Versão detectada do pacote fora da restrição de dependência: AutoMapper.Extensions.Microsoft.DependencyInjection 8.1.1 requer AutoMapper (>= 10.1.1 && < 11.0.0), mas a versão AutoMapper 11.0.1 foi resolvida.",
+      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 8.1.1 requires AutoMapper (>= 10.1.1 && < 11.0.0) but version AutoMapper 11.0.1 was resolved.",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net5.0"
