@@ -27,11 +27,11 @@ namespace servico_gama_ulife
         {
 
             services.AddControllers()
-                .AddFluentValidation(fv =>
-                    {
-                        fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
-                        fv.ValidatorOptions.LanguageManager.Culture = new System.Globalization.CultureInfo("pt-BR");
-                    });
+            .AddFluentValidation(fv =>
+                {
+                    fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
+                    fv.ValidatorOptions.LanguageManager.Culture = new System.Globalization.CultureInfo("pt-BR");
+                });
 
             services.AddSwaggerGen(c =>
             {
