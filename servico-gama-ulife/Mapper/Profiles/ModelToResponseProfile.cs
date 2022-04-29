@@ -14,6 +14,8 @@ namespace servico_gama_ulife.Mapper.Profiles
             CreateMap<QuestionModel, QuestionResponse>().ReverseMap();
             CreateMap<AlternativesModel, AlternativesResponse>().ReverseMap();
             CreateMap<UserEvaluationModel, UserEvaluationResponse>().ReverseMap();
+            CreateMap<EvaluationModel, EvaluationResponse>().ReverseMap();
+
         }
     }
 }

@@ -1,36 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj": {}
+    "P:\\gama-ulife\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj": {
+    "P:\\gama-ulife\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
+        "projectUniqueName": "P:\\gama-ulife\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
         "projectName": "servico-gama-ulife",
-        "projectPath": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
-        "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\Documents\\Anima\\Projeto Gama\\servico-gama-ulife-backend\\servico-gama-ulife\\obj\\",
+        "projectPath": "P:\\gama-ulife\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
+        "packagesPath": "C:\\Users\\Thale\\.nuget\\packages\\",
+        "outputPath": "P:\\gama-ulife\\servico-gama-ulife-backend\\servico-gama-ulife\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Thale\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -41,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -99,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

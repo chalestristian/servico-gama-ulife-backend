@@ -6,5 +6,7 @@ namespace servico_gama_ulife.Service.Interface
     public interface IEvaluationService
     {
         IList<EvaluationModel> GetEvaluation();
+        EvaluationModel GetEvaluationById(int nr_evaluationid);
+
     }
 }
