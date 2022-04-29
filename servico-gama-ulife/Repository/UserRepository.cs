@@ -81,5 +81,18 @@ namespace servico_gama_ulife.Repository
             return connection.Query<UserModel>(sql, parameters).ToList();
         }
 
+        public string DeleteUser(int nr_registry)
+        {
+            string sql = @"UPDATE ""user"" 
+                                SET isActive = false,
+                                dt_modifieddate = now()
+                           WHERE nr_registry = :nr_registry";
+
+            DynamicParameters parameters = new();
+            parameters.Add("@nr_registry", nr_registry, DbType.Int64, direction: ParameterDirection.Input);
+
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            return connection.Query<string>(sql, parameters).ToString();
+        }
     }
 }

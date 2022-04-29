@@ -41,9 +41,19 @@ namespace servico_gama_ulife.Controllers
         public IActionResult GetUserById([FromRoute] int nr_registry)
         {
             UserModel user = _userService.GetUserById(nr_registry);
+            if(user == null) 
+                return NotFound("Usuário não encontrado!");
             return Ok(_objectConverter.Map<UserResponse>(user));
         }
 
+        [HttpDelete("{nr_registry}")]
+        public IActionResult DeleteUser([FromRoute] int nr_registry)
+        {
+            string user = _userService.DeleteUser(nr_registry);
+            if (user == null)
+                return NotFound("Usuário não encontrado!");
+            return Ok(user);
+        }
         /// <summary>
         /// Atualizar nome e email do usuário
         /// </summary>

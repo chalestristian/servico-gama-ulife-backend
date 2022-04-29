@@ -38,5 +38,9 @@ namespace servico_gama_ulife.Service
         {
             return _userRepository.GetAllByType(nr_type);
         }
+        public string DeleteUser(int nr_registry)
+        {
+            return _userRepository.DeleteUser(nr_registry);
+        }
     }
 }
