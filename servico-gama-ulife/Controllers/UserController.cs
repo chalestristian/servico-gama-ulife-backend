@@ -41,18 +41,23 @@ namespace servico_gama_ulife.Controllers
         public IActionResult GetUserById([FromRoute] int nr_registry)
         {
             UserModel user = _userService.GetUserById(nr_registry);
-            if(user == null) 
+            if(user is null) 
                 return NotFound("Usuário não encontrado!");
             return Ok(_objectConverter.Map<UserResponse>(user));
         }
 
+        /// <summary>
+        /// Altera o valor da flag 'isActive' para false, caso o usuário for inativado
+        /// </summary>
+        /// <param name="nr_registry"></param>
+        /// <returns></returns>
         [HttpDelete("{nr_registry}")]
         public IActionResult DeleteUser([FromRoute] int nr_registry)
         {
-            string user = _userService.DeleteUser(nr_registry);
-            if (user == null)
-                return NotFound("Usuário não encontrado!");
-            return Ok(user);
+            var userExist = _userService.GetUserById(nr_registry);
+            if(userExist is null)
+                return NotFound("Usuário não encontrado!");         
+            return Ok(_userService.DeleteUser(nr_registry));
         }
         /// <summary>
         /// Atualizar nome e email do usuário
@@ -87,6 +92,10 @@ namespace servico_gama_ulife.Controllers
         [HttpGet("type/{nr_type}")]
         public IActionResult GetAllByType([FromRoute] int nr_type)
         {
+            IList<UserModel> type = _userService.GetAllByType(nr_type);
+            if(type.Count == 0) {
+                return BadRequest("Tipo não encontrado!");
+            }
             IList<UserModel> user = _userService.GetAllByType(nr_type);
             return Ok(_objectConverter.Map<IList<UserResponse>>(user));
         }
