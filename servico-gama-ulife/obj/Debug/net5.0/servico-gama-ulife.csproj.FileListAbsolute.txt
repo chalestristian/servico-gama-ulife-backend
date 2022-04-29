@@ -146,3 +146,46 @@ C:\Projetos\Projeto Integrador Ulife para Devs\servico-gama-ulife-backend\servic
 C:\Projetos\Projeto Integrador Ulife para Devs\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.pdb
 C:\Projetos\Projeto Integrador Ulife para Devs\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.genruntimeconfig.cache
 C:\Users\Lucas\Documents\Anima\Projeto Gama\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.AssemblyReference.cache
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\appsettings.json
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.StaticWebAssets.xml
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\appsettings.Development.json
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.exe
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.deps.json
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.runtimeconfig.json
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.runtimeconfig.dev.json
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\servico-gama-ulife.pdb
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\AutoMapper.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Dapper.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\FluentValidation.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Microsoft.OpenApi.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Npgsql.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.AssemblyReference.cache
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.GeneratedMSBuildEditorConfig.editorconfig
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.AssemblyInfoInputs.cache
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.AssemblyInfo.cs
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.CoreCompileInputs.cache
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.MvcApplicationPartsAssemblyInfo.cs
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.MvcApplicationPartsAssemblyInfo.cache
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\scopedcss\bundle\servico-gama-ulife.styles.css
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\staticwebassets\servico-gama-ulife.StaticWebAssets.Manifest.cache
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.RazorTargetAssemblyInfo.cache
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.csproj.CopyComplete
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\refint\servico-gama-ulife.dll
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.pdb
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\servico-gama-ulife.genruntimeconfig.cache
+P:\gama-ulife\servico-gama-ulife-backend\servico-gama-ulife\obj\Debug\net5.0\ref\servico-gama-ulife.dll

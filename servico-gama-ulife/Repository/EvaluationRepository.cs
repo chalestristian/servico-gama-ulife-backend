@@ -26,5 +26,20 @@ namespace servico_gama_ulife.Repository
             return connection.Query<EvaluationModel>(sql).ToList();
         }
 
+        public EvaluationModel GetEvaluationById(int nr_evaluationid)
+        {
+            string sql = @"SELECT * from ""evaluation""
+                        WHERE nr_evaluationid = :nr_evaluationid";
+
+            var parameters = new DynamicParameters();
+            parameters.Add("@nr_evaluationid", nr_evaluationid, DbType.Int32, direction: ParameterDirection.Input);
+   
+
+
+            using (var connection = GetConnection() as NpgsqlConnection)
+            {
+                return connection.QueryFirstOrDefault<EvaluationModel>(sql, parameters);
+            }
+        }
     }
 }

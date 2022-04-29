@@ -18,5 +18,12 @@ namespace servico_gama_ulife.Service
         {
             return _evaluationRepository.GetEvaluation();
         }
+
+        public EvaluationModel GetEvaluationById(int nr_evaluationid)
+        {
+            var resp = _evaluationRepository.GetEvaluationById(nr_evaluationid);
+            return resp;
+        }
+
     }
 }
