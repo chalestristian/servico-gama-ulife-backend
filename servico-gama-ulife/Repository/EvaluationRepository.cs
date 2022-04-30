@@ -26,6 +26,38 @@ namespace servico_gama_ulife.Repository
             return connection.Query<EvaluationModel>(sql).ToList();
         }
 
+        public IList<QuestionsModel> GetQuestionList(int nr_registry)
+        {
+            string sql = @"select qu.nr_questionid, a.*
+                            from questionnaire q
+                            inner join questionnaire_question qq ON q.nr_questionnaireid = qq.nr_questionnaireid
+                            inner join question qu on qu.nr_questionid = qq.nr_questionid
+                            inner join question_alternatives qa on qa.nr_questionid = qu.nr_questionid
+                            inner join alternatives a on a.nr_alternativesid = qa.nr_alternativesid
+                            where q.nr_questionnaireid = :nr_registry";
+
+            DynamicParameters parameters = new();
+            parameters.Add("@nr_registry", nr_registry, DbType.Int64, direction: ParameterDirection.Input);
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            return connection.Query<QuestionsModel>(sql, parameters).ToList();
+        }
+
+        public bool SaveGrade(int nr_userevaluationid, float media)
+        {
+            string sql = @"update 
+                            user_evaluation
+                            set ds_hasdone = true,
+                            dr_grade = :dr_grade,
+                            dt_modifieddate = now()
+                            where nr_userevaluationid = :nr_userevaluationid";
+
+            DynamicParameters parameters = new();
+            parameters.Add("@nr_userevaluationid", nr_userevaluationid, DbType.Int64, direction: ParameterDirection.Input);
+            parameters.Add("@dr_grade", media, DbType.Single, direction: ParameterDirection.Input);
+            using IDbConnection connection = GetConnection() as NpgsqlConnection;
+            connection.Query(sql, parameters);
+            return true;
+        }
         public EvaluationModel GetEvaluationById(int nr_evaluationid)
         {
             string sql = @"SELECT * from ""evaluation""

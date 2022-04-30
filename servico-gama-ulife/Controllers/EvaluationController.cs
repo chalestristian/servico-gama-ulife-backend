@@ -44,11 +44,13 @@ namespace servico_gama_ulife.Controllers
             return Ok(_objectConverter.Map<EvaluationResponse>(evaluation));
         }
 
-        /// <summary>
-        /// Atualizar nota e status
-        /// </summary>
-        /// <param name="updateUserEvaluation"></param>
-        /// <returns></returns>
-
+        [HttpPost("/{nr_registry}/{nr_userevaluationid}")]
+        public IActionResult SaveGrade([FromRoute] int nr_registry, [FromRoute] int nr_userevaluationid,
+            [FromBody] SaveGradeModel saveGradeModels)
+        {
+            var user = _evaluationService.SaveGrade(nr_registry, nr_userevaluationid, saveGradeModels);
+            return Ok(user);
+        }
+        
     }
 }
