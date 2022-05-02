@@ -32,7 +32,7 @@ namespace servico_gama_ulife.Repository
         {
             string sql = @"INSERT INTO token_log
                             (nr_userid, ds_token, dt_creationdate, dt_expirationdate)
-                            VALUES(:nr_userid, :ds_token, now(), now());";
+                            VALUES(:nr_userid, :ds_token, now(), now() + interval '24 hour');";
 
             using var connection = GetConnection() as NpgsqlConnection;
             return connection.QueryFirstOrDefault<TokenLogModel>(sql, new { userAuth.Nr_userid,userAuth.Ds_token });
