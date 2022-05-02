@@ -10,9 +10,6 @@ namespace servico_gama_ulife.Service
         UserModel GetUserById(int nr_registry);
         UserModel PutUser(int nr_registry,string Nm_user, string Ds_email);
         IList<UserModel> GetAllUser();
-        string AddUser(AddUser newUser);
-        IList<UserModel> GetAllByType(int nr_type);
-        string DeleteUser(int nr_registry);
         IList<object> GetAllUserEvalations(int user_id);
         bool PutUsetStatus(int user_id, bool isActive);
     }

@@ -23,30 +23,6 @@ namespace servico_gama_ulife.Controllers
             _userAuthenticationService = userAuthenticationService;
         }
 
-        /// <summary>
-        /// Retorna todos as avaliações
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        public IActionResult GetEvaluation()
-        {
-            IList<EvaluationModel> evaluation = _evaluationService.GetEvaluation();
-            return Ok(_objectConverter.Map<IList<EvaluationModel>>(evaluation));
-        }
-
-        /// <summary>
-        /// Buscar avaliação por id
-        /// </summary>
-        /// <param name="nr_evaluationid"></param>
-        /// <returns></returns>
-        [HttpGet]
-        [Route("GetEvaluationById/{nr_evaluationid}")]
-        public IActionResult GetEvaluationById([FromRoute] int nr_evaluationid)
-        {
-            var evaluation = _evaluationService.GetEvaluationById(nr_evaluationid);
-            return Ok(_objectConverter.Map<EvaluationResponse>(evaluation));
-        }
-
         [HttpPost("{nr_registry}/{nr_userevaluationid}")]
         public IActionResult SaveGrade([FromRoute] int nr_registry, [FromRoute] int nr_userevaluationid,
             [FromBody] SaveGradeModel saveGradeModels, [FromHeader] string token)
@@ -71,7 +47,7 @@ namespace servico_gama_ulife.Controllers
 
             if (authetication.Dt_expirationdate >= DateTime.Now)
             {
-                return Ok(_evaluationService.GetEvaluationByUserId(authetication.Nr_userid));
+                return Ok(_evaluationService.GetEvaluationByUserId(authetication.Nr_userid, authetication.Ds_usertypeid));
             }
             else
             {

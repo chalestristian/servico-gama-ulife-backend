@@ -6,8 +6,7 @@ namespace servico_gama_ulife.Repository.Interface
 {
     public interface IApiTesteRepository
     {
-        string ApiTesteBanco();
-        object BuscarUmUnicoDadoNoBanco(int codigo);       
+        string ApiTesteBanco();      
 
     }
 }

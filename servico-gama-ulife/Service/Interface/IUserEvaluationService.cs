@@ -9,9 +9,6 @@ namespace servico_gama_ulife.Service
     {
         UserEvaluationModel GetUserEvaluationById(int nr_userevaluationid);
         IList<UserEvaluationModel> GetUserEvaluationByUser(int nr_userid, int typeUser);
-        UserEvaluationModel GetUserEvaluationByIdAndUser(int nr_userid, int nr_userevaluationid);
-        UserEvaluationModel AddUserEvaluation(AddUserEvaluation newUserEvaluation);
         UserEvaluationModel UpdateUserEvaluation(UpdateUserEvaluation updateUserEvaluation);
-        IList<UserEvaluationModel> GetAllUserEvaluation();
     }
 }

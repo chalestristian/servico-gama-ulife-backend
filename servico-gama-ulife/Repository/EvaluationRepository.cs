@@ -17,16 +17,6 @@ namespace servico_gama_ulife.Repository
         {
         }
 
-        public IList<EvaluationModel> GetEvaluation()
-        {
-            string sql = @"select e.nr_evaluationid, e.nm_evaluation, e.nr_questionnaireid, q.nm_questionnaire 
-                            from evaluation e 
-                            join questionnaire q on q.nr_questionnaireid = e.nr_questionnaireid ";
-
-            using IDbConnection connection = GetConnection() as NpgsqlConnection;
-            return connection.Query<EvaluationModel>(sql).ToList();
-        }
-
         public IList<QuestionsModel> GetQuestionList(int nr_registry)
         {
             string sql = @"select qu.nr_questionid, a.*
@@ -59,24 +49,10 @@ namespace servico_gama_ulife.Repository
             connection.Query(sql, parameters);
             return true;
         }
-        public EvaluationModel GetEvaluationById(int nr_evaluationid)
-        {
-            string sql = @"SELECT * from ""evaluation""
-                        WHERE nr_evaluationid = :nr_evaluationid";
 
-            var parameters = new DynamicParameters();
-            parameters.Add("@nr_evaluationid", nr_evaluationid, DbType.Int32, direction: ParameterDirection.Input);
-
-
-
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                return connection.QueryFirstOrDefault<EvaluationModel>(sql, parameters);
-            }
-        }
         public IEnumerable<GetUserEvaluation> GetEvaluationByUserId(int nr_userId)
         {
-            string sql = @"select 
+            string sql = @"select
                         	u.nm_user, 
                         	e.nm_evaluation, 
                         	q.nm_questionnaire,
@@ -86,8 +62,8 @@ namespace servico_gama_ulife.Repository
                         from user_evaluation ue 
                         join evaluation e on e.nr_evaluationid = ue.nr_evaluationid 
                         join questionnaire q on q.nr_questionnaireid  = e.nr_questionnaireid 
-                        join ""user"" u on u.nr_userid = q.nr_userid 
-                        where ue.nr_userid = :nr_userId
+                        join ""user"" u on u.nr_userid = e.nr_userid 
+                        where ue.nr_userid =:nr_userId
                         and ue.ds_hasdone = false";
 
             var parameters = new DynamicParameters();
@@ -97,6 +73,26 @@ namespace servico_gama_ulife.Repository
             {
                 return connection.Query<GetUserEvaluation>(sql, parameters);
             }
-        } 
+        }
+        public IEnumerable<GetUserEvaluation> GetEvaluationByUserId()
+        {
+            string sql = @"select
+                        	u.nm_user, 
+                        	e.nm_evaluation, 
+                        	q.nm_questionnaire,
+                        	q.ds_questionnaire,
+	                        q.nr_questionnaireid,
+                            ue.nr_userevaluationid,
+                            ue.dr_grade
+                        from user_evaluation ue 
+                        join evaluation e on e.nr_evaluationid = ue.nr_evaluationid 
+                        join questionnaire q on q.nr_questionnaireid  = e.nr_questionnaireid 
+                        join ""user"" u on u.nr_userid = ue.nr_userid";
+
+            using (var connection = GetConnection() as NpgsqlConnection)
+            {
+                return connection.Query<GetUserEvaluation>(sql);
+            }
+        }
     }
 } 

@@ -8,18 +8,12 @@ namespace servico_gama_ulife.Service
     public class QuestionnaireService : IQuestionnaireService
     {
         private readonly IQuestionnaireRepository _questionnaireRepository;
-        private readonly IUserRepository _userRepository;
 
-        public QuestionnaireService(IQuestionnaireRepository questionnaireRepository, IUserRepository userRepository)
+        public QuestionnaireService(IQuestionnaireRepository questionnaireRepository)
         {
             _questionnaireRepository = questionnaireRepository;
-            _userRepository = userRepository;
         }
 
-        public IEnumerable<QuestionnaireModel> GetAllQUestionnaire()
-        {
-            return _questionnaireRepository.GetAllQuestionnaire();
-        }
         public QuestionnaireModel GetQuestionnaireById(int nr_questionnaireid)
         {
             return _questionnaireRepository.GetQuestionnaireById(nr_questionnaireid);

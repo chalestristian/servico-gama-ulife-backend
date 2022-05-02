@@ -16,13 +16,6 @@ namespace servico_gama_ulife.Repository
         {
         }
 
-        public IEnumerable<QuestionnaireModel> GetAllQuestionnaire()
-        {
-            string sql = @"SELECT * FROM questionnaire";
-
-            using var connection = GetConnection() as NpgsqlConnection;
-            return connection.Query<QuestionnaireModel>(sql);
-        }
         public QuestionnaireModel GetQuestionnaireById(int nr_userevaluationid)
         {
             string sql = @"select * from user_evaluation ue 

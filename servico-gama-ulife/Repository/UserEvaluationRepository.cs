@@ -14,36 +14,7 @@ namespace servico_gama_ulife.Repository
 {
     public class UserEvaluationRepository : PostgreSqlBase, IUserEvaluationRepository
     {
-        public UserEvaluationRepository(IConfiguration configuration) : base(configuration)
-        {
-        }
-        public UserEvaluationModel AddUserEvaluation(AddUserEvaluation newUserEvaluation)
-        {
-            string sql = @"INSERT into ""user_evaluation"" (nr_userid, nr_evaluationid, dr_grade, ds_hasdone, dt_creationdate, dt_modifieddate)	
-                            values(:nr_userid, :nr_evaluationid, :dr_grade,:ds_hasdone, now(), null)";
-
-            var parameters = new DynamicParameters();
-            parameters.Add("@nr_userid", newUserEvaluation.Nr_userid, DbType.Int32, direction: ParameterDirection.Input);
-            parameters.Add("@nr_evaluationid", newUserEvaluation.Nr_evaluationid, DbType.Int32, direction: ParameterDirection.Input);
-            parameters.Add("@dr_grade", newUserEvaluation.Dr_grade, DbType.Double, direction: ParameterDirection.Input);
-            parameters.Add("@ds_hasdone", newUserEvaluation.Ds_hasdone, DbType.Boolean, direction: ParameterDirection.Input);
-
-
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                return connection.QueryFirstOrDefault<UserEvaluationModel>(sql, parameters);
-            }
-        }
-
-        public IList<UserEvaluationModel> GetAllUserEvaluation()
-        {
-            string sql = @"SELECT * from ""user_evaluation"" ";
-
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                return connection.Query<UserEvaluationModel>(sql).ToList();
-            }
-        }
+        public UserEvaluationRepository(IConfiguration configuration) : base(configuration){ }
 
         public UserEvaluationModel GetUserEvaluationById(int nr_userevaluationid)
         {
@@ -51,23 +22,6 @@ namespace servico_gama_ulife.Repository
 
             var parameters = new DynamicParameters();
             parameters.Add("@nr_userevaluationid", nr_userevaluationid, DbType.Int32, direction: ParameterDirection.Input);
-
-
-            using (var connection = GetConnection() as NpgsqlConnection)
-            {
-                return connection.QueryFirstOrDefault<UserEvaluationModel>(sql, parameters);
-            }
-        }
-
-        public UserEvaluationModel GetUserEvaluationByIdAndUser(int nr_userid, int nr_userevaluationid)
-        {
-            string sql = @"SELECT * from ""user_evaluation""
-                                    WHERE nr_userevaluationid = :nr_userevaluationid
-                                      AND nr_userid = :nr_userid";
-
-            var parameters = new DynamicParameters();
-            parameters.Add("@nr_userevaluationid", nr_userevaluationid, DbType.Int32, direction: ParameterDirection.Input);
-            parameters.Add("@nr_userid", nr_userid, DbType.Int32, direction: ParameterDirection.Input);
 
 
             using (var connection = GetConnection() as NpgsqlConnection)

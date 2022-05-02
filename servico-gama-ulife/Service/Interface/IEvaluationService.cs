@@ -6,10 +6,7 @@ namespace servico_gama_ulife.Service.Interface
 {
     public interface IEvaluationService
     {
-        IList<EvaluationModel> GetEvaluation();
-        bool SaveGrade(int nr_registry, int nr_userevaluationid,
-             SaveGradeModel saveGradeModels);
-        EvaluationModel GetEvaluationById(int nr_evaluationid); 
-        IEnumerable<GetUserEvaluation> GetEvaluationByUserId(int nr_userId);
+        bool SaveGrade(int nr_registry, int nr_userevaluationid, SaveGradeModel saveGradeModels);
+        IEnumerable<GetUserEvaluation> GetEvaluationByUserId(int nr_userId, int ds_usertypeid);
     }
 }

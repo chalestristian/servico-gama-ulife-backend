@@ -19,24 +19,7 @@ namespace servico_gama_ulife.Controllers
             _questionnaireService = questionnaireService;
             _objectConverter = objectConverter;
         }
-        /// <summary>
-        /// Retorna lista completa de questionários
-        /// Sem questões.
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        public IActionResult GetAllQuestionnaire()
-        {
-            IEnumerable<QuestionnaireModel> result = _questionnaireService.GetAllQUestionnaire();
-            return Ok(_objectConverter.Map<IList<QuestionnaireResponse>>(result));
-        }
 
-        /// <summary>
-        /// Retorna questionário por ID
-        /// Sem questões.
-        /// </summary>
-        /// <param name="nr_questionnaireid"></param>
-        /// <returns></returns>
         [HttpGet]
         [Route("{nr_questionnaireid}")]
         public IActionResult GetQuestionnaireById([FromRoute] int nr_questionnaireid)
@@ -45,11 +28,7 @@ namespace servico_gama_ulife.Controllers
             return Ok(_objectConverter.Map<QuestionnaireResponse>(result));
         }
 
-        /// <summary>
-        /// Retorna todas as questões de um questionário, pelo questionnaireID
-        /// </summary>
-        /// <param name="nr_questionnaireid"></param>
-        /// <returns></returns>
+
         [HttpGet]
         [Route("{nr_questionnaireid}/QuestionList")]
         public IActionResult GetQuestionnaireQuestionList([FromRoute] int nr_questionnaireid)

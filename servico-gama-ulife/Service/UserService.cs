@@ -29,20 +29,6 @@ namespace servico_gama_ulife.Service
             return _userRepository.PutUser(nr_registry, Nm_user, Ds_email);
         }
 
-        public string AddUser(AddUser newUser)
-        {
-            return _userRepository.AddUser(newUser);
-        }
-
-        public IList<UserModel> GetAllByType(int nr_type)
-        {
-            return _userRepository.GetAllByType(nr_type);
-        }
-        public string DeleteUser(int nr_registry)
-        {
-            return _userRepository.DeleteUser(nr_registry);
-        }
-
         public IList<object> GetAllUserEvalations(int user_id)
         {
             return _userRepository.GetAllUserEvalations(user_id);

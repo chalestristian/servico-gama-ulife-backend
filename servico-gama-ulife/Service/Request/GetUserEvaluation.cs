@@ -7,11 +7,12 @@ namespace servico_gama_ulife.Service.Request
 {
     public class GetUserEvaluation
     {
-        public string nm_user { get; set; }
-        public string nm_evaluation { get; set; }
-        public string nm_questionnaire { get; set; }
-        public string ds_questionnaire { get; set; }
-        public int nr_questionnaireid { get; set; }
-        public int nr_userevaluationid { get; set; }
+        public string Nm_user { get; set; }
+        public string Nm_evaluation { get; set; }
+        public string Nm_questionnaire { get; set; }
+        public string Ds_questionnaire { get; set; }
+        public decimal? Dr_grade { get; set; }
+        public int Nr_questionnaireid { get; set; }
+        public int Nr_userevaluationid { get; set; }
     }
 }

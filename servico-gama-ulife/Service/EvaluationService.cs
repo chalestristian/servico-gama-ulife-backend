@@ -17,11 +17,6 @@ namespace servico_gama_ulife.Service
             _evaluationRepository = evaluationRepository;
         }
 
-        public IList<EvaluationModel> GetEvaluation()
-        {
-            return _evaluationRepository.GetEvaluation();
-        }
-
         public bool SaveGrade(int nr_registry, int nr_userevaluationid,
             SaveGradeModel saveGradeModels)
         {
@@ -46,16 +41,16 @@ namespace servico_gama_ulife.Service
             return ((qtdCorrectAnswers / quantidadeQuestion) * 10);
         }
 
-        public EvaluationModel GetEvaluationById(int nr_evaluationid)
-        {
-            var resp = _evaluationRepository.GetEvaluationById(nr_evaluationid);
-            return resp;
-        }
-
-        public IEnumerable<GetUserEvaluation> GetEvaluationByUserId(int nr_userId)
-        {
-            var resp = _evaluationRepository.GetEvaluationByUserId(nr_userId);
-            return resp;
+        public IEnumerable<GetUserEvaluation> GetEvaluationByUserId(int nr_userId, int ds_usertypeid)
+        { 
+            if(ds_usertypeid == 1)
+            {
+                return _evaluationRepository.GetEvaluationByUserId(nr_userId);
+            }
+            else
+            {
+                return _evaluationRepository.GetEvaluationByUserId();
+            }
         }
     }
 }

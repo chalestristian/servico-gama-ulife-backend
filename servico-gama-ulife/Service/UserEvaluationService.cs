@@ -13,27 +13,10 @@ namespace servico_gama_ulife.Service
         {
             _userEvaluationRepository = userEvaluationRepository;
         }
-        public UserEvaluationModel AddUserEvaluation(AddUserEvaluation newUserEvaluation)
-        {
-            var resp = _userEvaluationRepository.AddUserEvaluation(newUserEvaluation);
-            return resp;
-        }
-
-        public IList<UserEvaluationModel> GetAllUserEvaluation()
-        {
-            var resp = _userEvaluationRepository.GetAllUserEvaluation();
-            return resp;
-        }
 
         public UserEvaluationModel GetUserEvaluationById(int nr_userevaluationid)
         {
             var resp = _userEvaluationRepository.GetUserEvaluationById(nr_userevaluationid);
-            return resp;
-        }
-
-        public UserEvaluationModel GetUserEvaluationByIdAndUser(int nr_userid, int nr_userevaluationid)
-        {
-            var resp = _userEvaluationRepository.GetUserEvaluationByIdAndUser(nr_userid, nr_userevaluationid);
             return resp;
         }
 
