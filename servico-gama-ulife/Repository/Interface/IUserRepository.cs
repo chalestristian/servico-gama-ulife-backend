@@ -13,5 +13,7 @@ namespace servico_gama_ulife.Repository.Interface
         string AddUser(AddUser newUser);
         IList<UserModel> GetAllByType(int nr_type);
         string DeleteUser (int nr_registry);
+        IList<object> GetAllUserEvalations(int user_id);
+        bool PutUserSituation(int user_id, bool isActive);
     }
 }

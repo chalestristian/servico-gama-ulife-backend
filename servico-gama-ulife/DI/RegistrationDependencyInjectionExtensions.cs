@@ -23,6 +23,7 @@ namespace servico_gama_ulife.DI
             services.AddScoped<IQuestionnaireRepository, QuestionnaireRepository>();
             services.AddScoped<IUserEvaluationRepository, UserEvaluationRepository>();
             services.AddScoped<IEvaluationRepository, EvaluationRepository>();
+            services.AddScoped<ITokenLogRepository, TokenLogRepository>();
         }
 
         private static void RegisterServices(IServiceCollection services)

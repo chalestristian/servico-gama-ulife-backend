@@ -1831,20 +1831,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Thale\\.nuget\\packages\\": {}
+    "C:\\Users\\victor.lanni\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "P:\\gama-ulife\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
+      "projectUniqueName": "C:\\Users\\victor.lanni\\Desktop\\New folder (3)\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
       "projectName": "servico-gama-ulife",
-      "projectPath": "P:\\gama-ulife\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
-      "packagesPath": "C:\\Users\\Thale\\.nuget\\packages\\",
-      "outputPath": "P:\\gama-ulife\\servico-gama-ulife-backend\\servico-gama-ulife\\obj\\",
+      "projectPath": "C:\\Users\\victor.lanni\\Desktop\\New folder (3)\\servico-gama-ulife-backend\\servico-gama-ulife\\servico-gama-ulife.csproj",
+      "packagesPath": "C:\\Users\\victor.lanni\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\victor.lanni\\Desktop\\New folder (3)\\servico-gama-ulife-backend\\servico-gama-ulife\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Thale\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\victor.lanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1924,7 +1932,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -1933,7 +1941,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Versão detectada do pacote fora da restrição de dependência: AutoMapper.Extensions.Microsoft.DependencyInjection 8.1.1 requer AutoMapper (>= 10.1.1 && < 11.0.0), mas a versão AutoMapper 11.0.1 foi resolvida.",
+      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 8.1.1 requires AutoMapper (>= 10.1.1 && < 11.0.0) but version AutoMapper 11.0.1 was resolved.",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net6.0"

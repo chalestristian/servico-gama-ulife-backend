@@ -16,9 +16,13 @@ namespace servico_gama_ulife.Repository
 
         public UserAuthenticationModel UserSearch(UserAuthenticationModel userAuth)
         {
-            string sql = @"select u.ds_email as User,
+            string sql = @"select
+                        u.nr_userid as Id,
+                        u.ds_email as Email,
+                        u.nm_user as User,
                         u.""ds_password"" as Password,
-                        u.ds_usertypeid as Role
+                        u.ds_usertypeid as Role,
+                        u.IsActive
                         from ""user"" u
                         where u.ds_email = :email and u.""ds_password"" = :password";
 

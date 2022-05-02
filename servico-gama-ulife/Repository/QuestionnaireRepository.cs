@@ -23,22 +23,28 @@ namespace servico_gama_ulife.Repository
             using var connection = GetConnection() as NpgsqlConnection;
             return connection.Query<QuestionnaireModel>(sql);
         }
-        public QuestionnaireModel GetQuestionnaireById(int nr_questionnaireid)
+        public QuestionnaireModel GetQuestionnaireById(int nr_userevaluationid)
         {
-            string sql = @"SELECT * FROM questionnaire where nr_questionnaireid = :nr_questionnaireid";
+            string sql = @"select * from user_evaluation ue 
+                            inner join evaluation e on e.nr_evaluationid  = ue.nr_evaluationid 
+                            inner join questionnaire q on q.nr_questionnaireid = e.nr_questionnaireid 
+                            where ue.nr_userevaluationid = :nr_userevaluationid";
 
             using var connection = GetConnection() as NpgsqlConnection;
-            return connection.QueryFirstOrDefault<QuestionnaireModel>(sql, new { nr_questionnaireid });
+            return connection.QueryFirstOrDefault<QuestionnaireModel>(sql, new { nr_userevaluationid });
         }
 
-        public IEnumerable<QuestionModel> GetQuestionnaireQuestionsById(int nr_questionnaireid)
+        public IEnumerable<QuestionModel> GetQuestionnaireQuestionsById(int nr_userevaluationid)
         {
             using var connection = GetConnection() as NpgsqlConnection;
-            string sqlQuestionList = @"select * from questionnaire_question qq 
-                                       join question q on q.nr_questionid = qq.nr_questionid 
-                                       where qq.nr_questionnaireid = :nr_questionnaireid";
+            string sqlQuestionList = @"select * from user_evaluation ue 
+                                        inner join evaluation e on ue.nr_evaluationid = e.nr_evaluationid 
+                                        inner join questionnaire q on q.nr_questionnaireid  = e.nr_questionnaireid 
+                                        inner join questionnaire_question qq on qq.nr_questionnaireid  = e.nr_questionnaireid 
+                                        inner join question q2 on q2.nr_questionid  = qq.nr_questionid 
+                                        where ue.nr_userevaluationid = :nr_userevaluationid";
 
-            IEnumerable<QuestionModel> resultQuestionList = connection.Query<QuestionModel>(sqlQuestionList, new { nr_questionnaireid });
+            IEnumerable<QuestionModel> resultQuestionList = connection.Query<QuestionModel>(sqlQuestionList, new { nr_userevaluationid });
 
             if (resultQuestionList.Any())
             {

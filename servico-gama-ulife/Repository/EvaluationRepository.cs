@@ -4,6 +4,7 @@ using Npgsql;
 using servico_gama_ulife.Model;
 using servico_gama_ulife.Repository.Configuration;
 using servico_gama_ulife.Repository.Interface;
+using servico_gama_ulife.Service.Request;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -65,7 +66,7 @@ namespace servico_gama_ulife.Repository
 
             var parameters = new DynamicParameters();
             parameters.Add("@nr_evaluationid", nr_evaluationid, DbType.Int32, direction: ParameterDirection.Input);
-   
+
 
 
             using (var connection = GetConnection() as NpgsqlConnection)
@@ -73,5 +74,29 @@ namespace servico_gama_ulife.Repository
                 return connection.QueryFirstOrDefault<EvaluationModel>(sql, parameters);
             }
         }
+        public IEnumerable<GetUserEvaluation> GetEvaluationByUserId(int nr_userId)
+        {
+            string sql = @"select 
+                        	u.nm_user, 
+                        	e.nm_evaluation, 
+                        	q.nm_questionnaire,
+                        	q.ds_questionnaire,
+	                        q.nr_questionnaireid,
+                            ue.nr_userevaluationid
+                        from user_evaluation ue 
+                        join evaluation e on e.nr_evaluationid = ue.nr_evaluationid 
+                        join questionnaire q on q.nr_questionnaireid  = e.nr_questionnaireid 
+                        join ""user"" u on u.nr_userid = q.nr_userid 
+                        where ue.nr_userid = :nr_userId
+                        and ue.ds_hasdone = false";
+
+            var parameters = new DynamicParameters();
+            parameters.Add("@nr_userId", nr_userId, DbType.Int32, direction: ParameterDirection.Input);
+
+            using (var connection = GetConnection() as NpgsqlConnection)
+            {
+                return connection.Query<GetUserEvaluation>(sql, parameters);
+            }
+        } 
     }
-}
+} 

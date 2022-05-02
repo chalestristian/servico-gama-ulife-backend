@@ -78,7 +78,9 @@ namespace servico_gama_ulife.Repository
 
         public IList<UserEvaluationModel> GetUserEvaluationByUser(int nr_userid, int typeUser)
         {
-            string sql = @"SELECT * from ""user_evaluation"" where nr_userid = :nr_userid";
+            string sql = @"select * from user_evaluation ue 
+                           inner join evaluation e on e.nr_evaluationid  = ue.nr_evaluationid 
+                           where ue.nr_userid =:nr_userid";
 
             var parameters = new DynamicParameters();
             parameters.Add("@nr_userid", nr_userid, DbType.Int32, direction: ParameterDirection.Input);

@@ -1,6 +1,7 @@
 ﻿using servico_gama_ulife.Model;
 using servico_gama_ulife.Repository.Interface;
 using servico_gama_ulife.Service.Interface;
+using servico_gama_ulife.Service.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,11 +34,10 @@ namespace servico_gama_ulife.Service
             var questoesCertas = questions.Where(i => i.Ds_correctanswer).Select(o => o.Nr_alternativesid).ToList();
 
             qtdCorrectAnswers += (from item in questoesCertas
-                      where saveGradeModels.Answers.Contains(item)
-                      select item).Count();
+                                  where saveGradeModels.Answers.Contains(item)
+                                  select item).Count();
 
             float grade = GetAverageGrade(qtdCorrectAnswers, qtdQuestions);
-
             return _evaluationRepository.SaveGrade(nr_userevaluationid, grade);
         }
 
@@ -52,5 +52,13 @@ namespace servico_gama_ulife.Service
             return resp;
         }
 
+        public IEnumerable<GetUserEvaluation> GetEvaluationByUserId(int nr_userId)
+        {
+            var resp = _evaluationRepository.GetEvaluationByUserId(nr_userId);
+            return resp;
+        }
     }
 }
+
+
+

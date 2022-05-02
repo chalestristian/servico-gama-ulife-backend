@@ -18,8 +18,9 @@ namespace servico_gama_ulife.Controllers
         [HttpPost]
         public IActionResult UserAutheticationToken([FromBody] UserAuthenticationRequest request)
         {
-            string authetication = _userAuthenticationService.ValidAuthenticationToken(request);
-            return Ok(new AuthenticationResultViewModel(authetication != null ? "Login efetuado com sucesso" : "Usuário ou senha incorreto", authetication));
+            var authetication = _userAuthenticationService.ValidAuthenticationToken(request);
+            if (authetication != null) return Ok(authetication);
+            return Unauthorized();
         }
     }
 }

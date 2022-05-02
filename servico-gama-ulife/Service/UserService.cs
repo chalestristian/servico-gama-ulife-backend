@@ -42,5 +42,15 @@ namespace servico_gama_ulife.Service
         {
             return _userRepository.DeleteUser(nr_registry);
         }
+
+        public IList<object> GetAllUserEvalations(int user_id)
+        {
+            return _userRepository.GetAllUserEvalations(user_id);
+        }
+
+        public bool PutUsetStatus(int user_id, bool isActive)
+        {
+            return _userRepository.PutUserSituation(user_id, isActive);
+        }
     }
 }
